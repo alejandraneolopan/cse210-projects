@@ -7,14 +7,14 @@ public class Journal
                         "How did I see the hand of the Lord in my life today?",
                         "What was the strongest emotion I felt today?",
                         "If I had one thing I could do over today, what would it be?"];
+    string _key = "b14ca5898a4e4133bbce2ea2315a1916";                        
 
-    public void AddEntry(string prompt, string description, string location)
+    public void AddEntry(string prompt, string description)
     {
         Entry entry = new Entry();
         entry._entryPrompt = prompt;
         entry._entryDate = DateTime.Now;
         entry._entryDescription = description;
-        entry._location = location;
         _entries.Add(entry);
     }
 
@@ -28,26 +28,32 @@ public class Journal
 
     public void Load(string fileName)
     {
+        string decryptedLine;
         string[] lines = System.IO.File.ReadAllLines(fileName);
         foreach (string line in lines)
         {   Entry newEntry = new Entry();
-            string[] parts = line.Split(" - ");
+
+            //Decrypt before split
+            decryptedLine = AesOperation.DecryptString(_key, line);
+
+            string[] parts = decryptedLine.Split(" - ");
             newEntry._entryDate = DateTime.Parse(parts[0]);
             newEntry._entryPrompt = parts[1];
             newEntry._entryDescription = parts[2];
-            newEntry._location = parts[3];
             _entries.Add(newEntry);
         }
     }
 
     public void Save(string fileName)
     {
+        string encryptedLine;
         using (StreamWriter outputFile = new StreamWriter(fileName))
         foreach (Entry entry in _entries)
-        {
-            outputFile.WriteLine(entry._entryDate + " - " + entry._entryPrompt + " - " + entry._entryDescription + " - " + entry._location);
+        {   //Encrypt first before saving the line
+            encryptedLine = AesOperation.EncryptString(_key, entry._entryDate + " - " + entry._entryPrompt + " - " + entry._entryDescription);
+            outputFile.WriteLine(encryptedLine);
         }
-      
+        
     
     }
 
