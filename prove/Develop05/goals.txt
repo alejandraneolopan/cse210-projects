@@ -1,0 +1,4 @@
+0
+SimpleGoal:Prepare budget,budget,100,False
+EternalGoal:Read,read,200
+Checklist:Being married,marry Gualberto,1000000, 3, 0
