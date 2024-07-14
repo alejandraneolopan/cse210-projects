@@ -9,9 +9,20 @@ class Program
         string unitOfMeasure, productType, description, addMore, unit2;
         float cost, conversion;
         Ingredient ingredient;
-        Console.WriteLine("Hello FinalProject World!");
-        Console.WriteLine("Menu Planner");
-        Console.WriteLine("============");
+        Console.Clear();
+        Console.WriteLine("");
+        Console.WriteLine("__   __");
+        Console.WriteLine("|    |    ___  , __   ,   .");
+        Console.WriteLine("|\\  /|  .'   ` |'  `. |   |");
+        Console.WriteLine("| \\/ |  |----' |    | |   |");
+        Console.WriteLine("/    /  `.___, /    | `._/|");
+        Console.WriteLine("");                            
+        Console.WriteLine(".___   .");
+        Console.WriteLine("/   \\  |     ___  , __   , __     ___  .___");
+        Console.WriteLine("|,_ -' |    /   ` |'  `. |'  `. .'   ` /   \\");
+        Console.WriteLine("|      |   |    | |    | |    | |----' |   '");
+        Console.WriteLine("/     /\\__ `.__/| /    | /    | `.___, /    ");
+        Console.WriteLine("");
         MenuPlanner planner = new MenuPlanner();
         planner.LoadSettings();
         
