@@ -18,12 +18,12 @@ class Inventory
         }
         return false;
     }
-    public void NewElement(Ingredient ingredient, int quantity, string unitOfMeasure, decimal cost)
+    public void NewElement(Ingredient ingredient, int quantity, string unitOfMeasure, float cost)
     {
         Stock stock= new Stock(ingredient, quantity, unitOfMeasure, cost);
         _ingredients.Add(stock);
     }
-    public void UpdateElement(Ingredient ingredient, int quantity, string unitOfMeasure, decimal cost)
+    public void UpdateElement(Ingredient ingredient, int quantity, string unitOfMeasure, float cost)
     {
         foreach(Stock stock in _ingredients)
         {

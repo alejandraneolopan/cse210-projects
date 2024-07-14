@@ -1,7 +1,10 @@
-class Ingredient
+abstract class Ingredient
 {
-    public Ingredient(string productType, string description)
+    string _description;
+    public Ingredient(string description)
     {
+        _description = description;
 
     }
+
 }
