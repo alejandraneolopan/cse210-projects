@@ -1,0 +1,5 @@
+C, 25, lb, potato, 50
+V, 25, ,onion, 5
+P, 1, l, milk, 6
+V, 20, ,carrot, 10
+P, 30, , egg, 28

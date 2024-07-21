@@ -37,7 +37,7 @@ class Library
     private string capitalizedWord (string word)
     {
         string capitalLetter = word.Substring(0, 1).ToUpper();
-        string capitalWord = word.Substring(1, word.Length-1).ToLower();
+        string capitalWord = word.Substring(1, word.Length - 1).ToLower();
         return capitalLetter + capitalWord;
     }
 

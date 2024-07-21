@@ -1,0 +1,20 @@
+Chicken Tortilla, dish, 5
+[F, 8, cups, chicken soup]
+[V,1,, onion]
+[C, 1.5, packet, chili powder]
+Picante de Pollo, dish, 5
+[P, 1,kg,chicken]
+[C, 1,lb, fideo]
+[V,5,,potato]
+[F, 10,gr,mani]
+[V,1,, onion]
+[V,1,, arverja]
+[V,1,, carrot]
+Fideo Soup, soup,5
+[P, 0.5,Kg, chicken]
+[P, 0.5,Kg, stake]
+[C, 1,lb, fideo]
+[V,1,, potato]
+[V,1,, onion]
+[V,1,, arverja]
+[V,1,, carrot]
